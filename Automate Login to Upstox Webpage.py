@@ -47,7 +47,8 @@ print(f'\nTrying to Login from Account Holder: {hold_name}')
 trading_url = "https://pro.upstox.com"  # or https://app.upstox.com
 options = uc.ChromeOptions()
 options.add_argument("--start-maximized")
-driver = uc.Chrome(options=options)
+driver = uc.Chrome(version_main=144, options=options)
+# driver = uc.Chrome(options=options)
 
 driver.get(trading_url)
 wait = WebDriverWait(driver, 30)
